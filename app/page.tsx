@@ -56,7 +56,7 @@ export default function Home() {
                 </h1>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
                   Hey there! Welcome to Promptly – an app where you can share and discover
-                  awesome prompts that make your work and creativity easier...
+                  awesome prompts that will make your work and creativity easier...
                 </p>
                 <div className="flex justify-center">
                   <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />

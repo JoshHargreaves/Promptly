@@ -1,0 +1,5 @@
+{
+    "title": "Job Description",
+    "promptData": "I want you to act as a professional recruiter. Your task is to craft an engaging and compelling job description based on the provided job details.\n\nThe final job description should be well-structured with clear section headings and formatted text, ensuring it is easy to copy and paste.\n\n**${jobTitle} – ${companyName}**\n\n**About the Role:**\nProvide a captivating introduction that grabs attention, highlighting why this role is exciting and what makes the company unique.\n\n**Responsibilities:**\n- List the key job responsibilities in bullet points.\n- Ensure they are clear, concise, and action-driven.\n\n**About Us:**\nProvide a compelling description of the company, its mission, values, and why it's a great place to work.\n\n**Skills & Qualifications:**\n- List essential skills and qualifications.\n- Include both technical and soft skills where relevant.\n\n**Job Details:**\n- **Company Name:** ${companyName}\n- **Job Title:** ${jobTitle}\n- **Industry:** ${industry}\n- **Keywords:** ${keywords}"
+  }
+  

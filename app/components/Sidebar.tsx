@@ -2,8 +2,13 @@
 import { useState } from "react";
 import { FiBriefcase, FiTrendingUp, FiEdit, FiChevronDown, FiChevronUp } from "react-icons/fi";
 
-export default function Sidebar() {
-  type DropdownItem = "career" | "marketing" | "content" | null;
+type DropdownItem = "career" | "marketing" | "content" | null;
+
+type SidebarProps = {
+  onSelectPrompt: (promptKey: string) => void;
+};
+
+export default function Sidebar({ onSelectPrompt }: SidebarProps) {
   const [openDropdown, setOpenDropdown] = useState<DropdownItem>(null);
 
   const handleDropdownToggle = (item: "career" | "marketing" | "content") => {
@@ -28,19 +33,28 @@ export default function Sidebar() {
             {openDropdown === "career" && (
               <ul className="mt-2 ml-6 space-y-2">
                 <li>
-                  <a href="#" className="block py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                  <button
+                    onClick={() => onSelectPrompt("jobDescription")}
+                    className="block w-full text-left py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                  >
                     Job Description
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="block py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                  <button
+                    onClick={() => onSelectPrompt("interviewPreparation")}
+                    className="block w-full text-left py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                  >
                     Interview Preparation
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="block py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                  <button
+                    onClick={() => onSelectPrompt("resumeTips")}
+                    className="block w-full text-left py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                  >
                     Resume Tips
-                  </a>
+                  </button>
                 </li>
               </ul>
             )}
@@ -59,14 +73,20 @@ export default function Sidebar() {
             {openDropdown === "marketing" && (
               <ul className="mt-2 ml-6 space-y-2">
                 <li>
-                  <a href="#" className="block py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                  <button
+                    onClick={() => onSelectPrompt("adCopy")}
+                    className="block w-full text-left py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                  >
                     Ad Copy
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="block py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                  <button
+                    onClick={() => onSelectPrompt("seoSuggestions")}
+                    className="block w-full text-left py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                  >
                     SEO Suggestions
-                  </a>
+                  </button>
                 </li>
               </ul>
             )}
@@ -85,14 +105,20 @@ export default function Sidebar() {
             {openDropdown === "content" && (
               <ul className="mt-2 ml-6 space-y-2">
                 <li>
-                  <a href="#" className="block py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                  <button
+                    onClick={() => onSelectPrompt("blogOutlines")}
+                    className="block w-full text-left py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                  >
                     Blog Outlines
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="block py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                  <button
+                    onClick={() => onSelectPrompt("socialMediaPosts")}
+                    className="block w-full text-left py-1 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                  >
                     Social Media Posts
-                  </a>
+                  </button>
                 </li>
               </ul>
             )}
